@@ -16,6 +16,11 @@ const FILES_TO_CACHE = [
 ];
 
 self.addEventListener('activate', function(e) {
+    console.log('fetch request : ' + e.request.url)
+    e.respondWith(
+        
+    )
+
     e.waitUntil(
       caches.keys().then(function(keyList) {
         let cacheKeeplist = keyList.filter(function(key) {
